@@ -1,6 +1,7 @@
 #include <windows.h>
 #include <iostream>
 #include <string>
+#include <process.h>
 
 #include "ConsoleHandler.h"
 #include "GameMaster.h"
@@ -63,7 +64,10 @@ int main(void)
     else if (gameMaster.getStatus() == GameMaster::GameStatus::HumanWon)
         std::cout << "You won!!!";
     else
-        std::cout << "The bot won!!!";
+        std::cout << "The bot won!!!" << std::endl;
+
+    // Keep the window open
+    system("pause");
 
     return 0;
 }
