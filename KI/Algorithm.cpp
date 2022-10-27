@@ -86,8 +86,8 @@ int Algorithm::minimax(std::shared_ptr<Node> node, int depth, int alpha, int bet
 
             // We don't need to check the rest of the children, if the human already has a better choice by taking
             // another branch.
-            //if (beta <= alpha)
-            //    break;
+            if (beta <= alpha)
+                break;
         }
         node->setNodeValue(max);
         return max;
@@ -105,8 +105,8 @@ int Algorithm::minimax(std::shared_ptr<Node> node, int depth, int alpha, int bet
 
             // We don't need to check the rest of the children, if the algorithm already has a better choice by taking
             // another branch.
-            //if (beta <= alpha)
-            //    break;
+            if (beta <= alpha)
+                break;
         }
         node->setNodeValue(min);
         return min;
